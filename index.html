@@ -3,150 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anime sample</title>
+  <title>Anime Sample</title>
   <!-- Google Fonts: Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS (make sure to include this in your build process or via CDN for demo) -->
- <style>
-   body {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'Nunito', sans-serif;
-}
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom, #000000, #1f2937, #1f2937);
-  padding: 1rem;
-}
-
-header {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.125rem;
-  color: #9ca3af;
-}
-
-main {
-  width: 100%;
-  max-width: 42rem;
-}
-
-.card-wrapper {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-wrapper h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.anime-card-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .anime-card-container {
-    flex-direction: row;
-  }
-}
-
-.anime-card {
-  background-color: #111827;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  width: 18rem;
-}
-
-.anime-card img {
-  width: 100%;
-  height: auto;
-}
-
-.anime-card-content {
-  padding: 1rem;
-}
-
-.anime-card-content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.anime-card-content p {
-  color: #9ca3af;
-  margin-bottom: 0.5rem;
-}
-
-.tag {
-  display: inline-block;
-  background-color: #7c3aed;
-  color: white;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-}
-
-footer {
-  margin-top: 2rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
- </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body class="bg-black text-white font-sans">
+  
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Nunito', sans-serif;
+    }
 
-  <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-gray-900 to-gray-800 p-4">
-    <header class="mb-8 text-center">
-      <h1 class="text-4xl font-bold mb-2">Anime Sample</h1>
-      <p class="text-lg text-gray-400">Welcome to your anime showcase!</p>
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #000000, #1f2937, #1f2937);
+      padding: 1rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.125rem;
+      color: #9ca3af;
+    }
+
+    main {
+      width: 100%;
+      max-width: 42rem;
+    }
+
+    .card-wrapper {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-wrapper h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .anime-card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .anime-card-container {
+        flex-direction: row;
+      }
+    }
+
+    .anime-card {
+      background-color: #111827;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+      width: 18rem;
+    }
+
+    .anime-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .anime-card-content {
+      padding: 1rem;
+    }
+
+    .anime-card-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .anime-card-content p {
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #7c3aed;
+      color: white;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Anime Sample</h1>
+      <p>Welcome to your anime showcase!</p>
     </header>
 
-    <main class="w-full max-w-2xl">
-      <div class="bg-white bg-opacity-10 rounded-lg shadow-lg p-6 mb-6">
-        <h2 class="text-2xl font-semibold mb-4 text-center">Featured Anime</h2>
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-          <!-- Anime Card Example -->
-          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-72">
-            <img src="https://wallpapers.com/images/hd/rascal-does-not-dream-of-bunny-girl-senpai-ayhphpy1r4mbunfg.jpg" alt="Anime cover" class="w-full h-auto">
-            <div class="p-4">
-              <h3 class="text-xl font-bold mb-2">Rascal Does not Dream of a Bunny Girl</h3>
-              <p class="text-gray-400 mb-2">A short anime description goes here.</p>
-              <span class="inline-block bg-purple-600 text-xs px-2 py-1 rounded">Action</span>
+    <main>
+      <div class="card-wrapper">
+        <h2>Featured Anime</h2>
+        <div class="anime-card-container">
+          <div class="anime-card">
+            <img src="https://wallpapers.com/images/hd/rascal-does-not-dream-of-bunny-girl-senpai-ayhphpy1r4mbunfg.jpg" alt="Anime cover">
+            <div class="anime-card-content">
+              <h3>Rascal Does not Dream of a Bunny Girl</h3>
+              <p>A short anime description goes here.</p>
+              <span class="tag">Action</span>
             </div>
           </div>
-          <!-- Add more anime cards as needed -->
+          <!-- Add more anime cards here if needed -->
         </div>
       </div>
     </main>
 
-    <footer class="mt-8 text-gray-500 text-sm">
+    <footer>
       &copy; 2025 Anime Sample. All rights reserved.
     </footer>
   </div>
