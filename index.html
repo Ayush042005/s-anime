@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime sample</title>
+  <!-- Google Fonts: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS (make sure to include this in your build process or via CDN for demo) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Favicon (replace with actual base64 or file path if desired) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="bg-black text-white font-sans">
+
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-gray-900 to-gray-800 p-4">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold mb-2">Anime Sample</h1>
+      <p class="text-lg text-gray-400">Welcome to your anime showcase!</p>
+    </header>
+
+    <main class="w-full max-w-2xl">
+      <div class="bg-white bg-opacity-10 rounded-lg shadow-lg p-6 mb-6">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Featured Anime</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <!-- Anime Card Example -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-72">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Anime cover" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Anime Title</h3>
+              <p class="text-gray-400 mb-2">A short anime description goes here.</p>
+              <span class="inline-block bg-purple-600 text-xs px-2 py-1 rounded">Action</span>
+            </div>
+          </div>
+          <!-- Add more anime cards as needed -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-8 text-gray-500 text-sm">
+      &copy; 2025 Anime Sample. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
