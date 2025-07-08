@@ -124,12 +124,19 @@
     .anime-card-content p {
   max-height: 9rem;
   overflow-y: auto;
-  color: var(--text-light);
+  padding-right: 0.4rem;
+  color: #9ca3af;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
   line-height: 1.25rem;
-}
 
+  /* Hide scrollbar in all major browsers */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* Internet Explorer/Edge */
+}
+.anime-card-content p::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari */
+}
 
     .tag {
       display: inline-block;
