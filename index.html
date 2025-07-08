@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anime Sample</title>
-  <!-- Google Fonts: Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+
   <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --text-light: #9ca3af;
+      --card-bg: #111827;
+      --tag-bg: #7c3aed;
+      --hover-bg: #5b21b6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Nunito', sans-serif;
     }
 
@@ -21,24 +35,25 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to bottom, #000000, #1f2937, #1f2937);
+      background: linear-gradient(to bottom, var(--bg), #1f2937, #1f2937);
       padding: 1rem;
     }
 
     header {
-      margin-bottom: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
+      animation: slideDown 1s ease-out;
     }
 
     header h1 {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1.125rem;
-      color: #9ca3af;
+      color: var(--text-light);
     }
 
     main {
@@ -59,28 +74,32 @@
       font-weight: 600;
       margin-bottom: 1rem;
       text-align: center;
+      animation: fadeInUp 1s ease-in;
     }
 
     .anime-card-container {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 1.5rem;
-      align-items: center;
       justify-content: center;
-    }
-
-    @media (min-width: 768px) {
-      .anime-card-container {
-        flex-direction: row;
-      }
+      align-items: stretch;
     }
 
     .anime-card {
-      background-color: #111827;
+      background-color: var(--card-bg);
       border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
       width: 18rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease-in;
+    }
+
+    .anime-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
     .anime-card img {
@@ -90,6 +109,10 @@
 
     .anime-card-content {
       padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
     }
 
     .anime-card-content h3 {
@@ -99,23 +122,58 @@
     }
 
     .anime-card-content p {
-      color: #9ca3af;
-      margin-bottom: 0.5rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.25rem;
+      max-height: 9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .tag {
       display: inline-block;
-      background-color: #7c3aed;
+      background-color: var(--tag-bg);
       color: white;
       font-size: 0.75rem;
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
+      margin-right: 0.5rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag:hover {
+      background-color: var(--hover-bg);
     }
 
     footer {
       margin-top: 2rem;
       font-size: 0.875rem;
       color: #6b7280;
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -131,34 +189,33 @@
       <div class="card-wrapper">
         <h2>Featured Anime</h2>
         <div class="anime-card-container">
+
+          <!-- Anime Card 1 -->
           <div class="anime-card">
-            <img src="https://wallpapers.com/images/hd/rascal-does-not-dream-of-bunny-girl-senpai-ayhphpy1r4mbunfg.jpg" alt="Anime cover" class="w-full h-auto">
+            <img src="https://wallpapers.com/images/hd/rascal-does-not-dream-of-bunny-girl-senpai-ayhphpy1r4mbunfg.jpg" alt="Anime cover">
             <div class="anime-card-content">
               <h3>Rascal Does not Dream of a Bunny Girl</h3>
-              <p>Rascal Does Not Dream of Bunny Girl Senpai follows high school student Sakuta Azusagawa as he encounters Mai Sakurajima, a famous actress who 
-                has inexplicably become invisible to others. This strange phenomenon, dubbed "Adolescence Syndrome," is linked to the emotional struggles and 
-                social pressures faced by teenagers. Sakuta, having experienced the syndrome himself, vows to help Mai and other girls who are afflicted by these 
-                supernatural manifestations of their psychological issues. The series uses its unique blend of slice-of-life and supernatural elements to explore 
-                themes of social anxiety, self-acceptance, and the power of human connection, all while featuring the developing romance between Sakuta and Mai.</p>
-              <a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream" target="_blank" class="tag">know more</a>
-              <a href="https://www.pinterest.com/davagenation/rascal-doesnt-dream-of-bunny-girl-senpai/" class="tag">Pintrest</a>
+              <p>Rascal Does Not Dream of Bunny Girl Senpai follows Sakuta as he helps Mai, a famous actress invisible to others due to a mysterious phenomenon called "Adolescence Syndrome." The series explores teen anxieties, emotional trauma, and self-acceptance through a supernatural slice-of-life narrative.</p>
+              <div>
+                <a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream" target="_blank" class="tag">Know more</a>
+                <a href="https://www.pinterest.com/davagenation/rascal-doesnt-dream-of-bunny-girl-senpai/" class="tag">Pinterest</a>
+              </div>
             </div>
           </div>
-          <div class="anime-card-container">
+
+          <!-- Anime Card 2 -->
           <div class="anime-card">
-            <img src="https://i0.wp.com/calxylian.com/wp-content/uploads/2022/05/Vinland-Saga-and-End-of-Prologue.webp" alt="Vinland Saga" class="w-full h-auto">
+            <img src="https://i0.wp.com/calxylian.com/wp-content/uploads/2022/05/Vinland-Saga-and-End-of-Prologue.webp" alt="Vinland Saga">
             <div class="anime-card-content">
-               <h3>Vinland Saga</h3>
-              <p>"Vinland Saga" is a historical manga and anime series following the life of Thorfinn, a young Viking warrior consumed by a quest for revenge against 
-                Askeladd, the man responsible for his father's death. The first season, the "War Arc", depicts Thorfinn's journey with Askeladd's mercenary band as they 
-                participate in conflicts and political intrigue, showcasing the brutality of the Viking age. The second season, the "Slave Arc", takes a shift in tone as
-                Thorfinn becomes a slave after Askeladd's death and embarks on a path towards finding peace and meaning in life, influenced by his father's words and a 
-                new friend, Einar. The story explores themes of vengeance, honor, violence, pacifism, and the search for a true warrior's path. </p>
-              <a href="https://en.wikipedia.org/wiki/Vinland_Saga_(TV_series)" target="_blank" class="tag">know more</a>
-              <a href="https://www.pinterest.com/teateodora16/vinland-saga/" class="tag">Pintrest</a>
+              <h3>Vinland Saga</h3>
+              <p>"Vinland Saga" follows Thorfinn, a Viking youth bent on revenge. Through war and slavery, he learns to redefine his path from hatred to peace. The anime explores vengeance, violence, honor, and transformation, set against brutal Viking history.</p>
+              <div>
+                <a href="https://en.wikipedia.org/wiki/Vinland_Saga_(TV_series)" target="_blank" class="tag">Know more</a>
+                <a href="https://www.pinterest.com/teateodora16/vinland-saga/" class="tag">Pinterest</a>
+              </div>
             </div>
           </div>
-          <!-- Add more anime cards here if needed -->
+
         </div>
       </div>
     </main>
