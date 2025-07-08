@@ -7,8 +7,117 @@
   <!-- Google Fonts: Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <!-- Tailwind CSS (make sure to include this in your build process or via CDN for demo) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Favicon (replace with actual base64 or file path if desired) -->
+ <style>
+   body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #000000, #1f2937, #1f2937);
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.125rem;
+  color: #9ca3af;
+}
+
+main {
+  width: 100%;
+  max-width: 42rem;
+}
+
+.card-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-wrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.anime-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .anime-card-container {
+    flex-direction: row;
+  }
+}
+
+.anime-card {
+  background-color: #111827;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  width: 18rem;
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+}
+
+.anime-card-content {
+  padding: 1rem;
+}
+
+.anime-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.anime-card-content p {
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #7c3aed;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+ </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="bg-black text-white font-sans">
